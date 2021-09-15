@@ -18,6 +18,25 @@ module.exports = {
         content: 'width=device-width,initial-scale=1,user-scalable=no',
       },
     ],
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-4LEVG0M4WF',
+      },
+    ],
+    [
+      'script',
+      {
+      },
+      `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4LEVG0M4WF');
+      `
+    ],
   ],
   theme: 'reco',
   themeConfig: {
@@ -35,6 +54,7 @@ module.exports = {
           { text: '博客园', link: 'https://www.cnblogs.com/xutongbao/' },
           { text: '51CTO', link: 'https://blog.51cto.com/xutongbao' },
         ],
+        icon: 'reco-blog',
       },
       {
         text: '开源项目',
@@ -57,6 +77,11 @@ module.exports = {
           },
         ],
       },
+      {
+        text: '联系作者',
+        link: '/src/light/contactMe',
+        icon: 'reco-wechat',
+      },
     ],
     sidebar: 'auto',
     type: 'blog',
@@ -64,7 +89,6 @@ module.exports = {
     logo: '/logo.png',
     search: true,
     searchMaxSuggestions: 10,
-    lastUpdated: 'Last Updated',
     author: '徐同保',
     authorAvatar: '/avatar.png',
     lastUpdated: '上次更新',
@@ -84,4 +108,12 @@ module.exports = {
   markdown: {
     lineNumbers: true,
   },
+  // plugins: [
+  //   [
+  //     '@vuepress/google-analytics',
+  //     {
+  //       ga: 'G-4LEVG0M4WF', // UA-00000000-0
+  //     },
+  //   ],
+  // ],
 }

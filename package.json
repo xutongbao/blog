@@ -10,5 +10,8 @@
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.6"
   },
-  "description": "博客"
+  "description": "博客",
+  "dependencies": {
+    "@vuepress/plugin-google-analytics": "^1.8.2"
+  }
 }
